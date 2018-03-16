@@ -1,7 +1,7 @@
-defmodule Discuss.Plug.RequireAuth do
+defmodule Discuss.Plugs.RequireAuth do
   
   import Plug.Conn
-  import Plug.Controller
+  import Phoenix.Controller
 
   alias Discuss.Router.Helpers
 
@@ -12,6 +12,7 @@ defmodule Discuss.Plug.RequireAuth do
     if conn.assigns[:user] do
       conn
     else
+      conn
       |> put_flash(:error, "You mus be logged in")
       |> redirect(to: Helpers.topic_path(conn, :index))
       |> halt()
