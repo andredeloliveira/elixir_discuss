@@ -1,5 +1,7 @@
 # Discuss
 
+An app made following Udemy's course on building applications on Elixir and Phoenix.
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
